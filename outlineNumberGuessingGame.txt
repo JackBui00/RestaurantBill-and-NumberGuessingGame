@@ -1,0 +1,21 @@
+Create menu options for the user
+Request the response from user as a integer 
+Request the user to input a number between 0 and the max in string form 
+If that string is equal to "q", calls recursive to main()
+If that string is not equal to "q", it will convert from a string into integer
+Enter while statement as long as the integer is not equal to the machine picked integer
+    return information on if the guessed digit is correct
+        int guess is too low
+        int guess is too high 
+    If user enters "q", it will recursive call main()
+        menu for 3 options come up 
+If user inputs 2 
+    Return message requesting a new max number that has to be a positive integer
+        print 
+            Integer has been changed
+            Or that number is out of bounce
+                recursive call Main()
+if user inputs 3
+    program ends
+    print 
+        good bye  
