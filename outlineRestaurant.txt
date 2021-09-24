@@ -1,0 +1,9 @@
+create array to hold prices of each food item 
+create 2d array to hold string names of each 
+Request the percentage sales tax
+request the percentage tip
+Calculate the sales tax 
+calculate the tip with the new price including tax 
+Print out tax value 
+print out tip value 
+print out total value 
