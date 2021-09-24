@@ -10,8 +10,27 @@ int main(){
     srand((unsigned) time(&t));
     // declare file 
     FILE *file;
+
     //set static maxNumber
     static int maxNumber = 10;
+    // create string array of size 10 char
+    char buff[10]; 
+    // open file named "userinput.txt"
+    file = fopen("userInput.txt", "r");
+    // check if file exist 
+    if(file == NULL){
+        //if file does not exist, keep maxNumber as maxNumber
+        maxNumber = maxNumber; 
+    }
+    else{
+        // if file exist, read first input in file
+        fgets(buff,10, file);
+        // new maxNumber is set as first integer read in file
+        maxNumber = buff[0]; 
+        // close file reader 
+        fclose(file); 
+    }
+    
     // select guessNumber to be random and between highest allowed value 
     int guessNumber = rand() % maxNumber; 
     // print out choice menu for the user to choose
@@ -75,6 +94,11 @@ int main(){
         if(tempnumber>0 && tempnumber< INT_MAX){
             // replace max number with the temp integer 
             maxNumber = tempnumber; 
+            
+            FILE *file;
+            file = fopen("userInput.txt", "w");
+            putw(maxNumber,file);
+            fclose(file); 
             // send message declaring new max number is made 
             printf("\nThe New Max Number is %d\n", maxNumber); 
             // recursive call 
