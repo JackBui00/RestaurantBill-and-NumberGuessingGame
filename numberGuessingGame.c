@@ -27,6 +27,7 @@ int main(){
         printf("Pick a number between 1 and %d. ", maxNumber); 
         scanf("%s", &userGameGuess);
         if(strcmp("q", userGameGuess) == 0){
+            // recursive call main()
             main(); 
         }
         else{
@@ -41,7 +42,7 @@ int main(){
                 scanf("%s", &userGameGuess);
                 if(strcmp("q", userGameGuess) == 0){
                     main(); 
-                } 
+                }
                 guessValue = atoi(userGameGuess); 
             }
             //if user guess is larger than guess number, request a smaller number 
